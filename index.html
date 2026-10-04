@@ -1,51 +1,78 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>site</title>
+<title>sephean</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="cute 20 yo playboy">
-<meta property="og:title" content="site">
+<meta name="theme-color" content="#060608">
+<meta property="og:title" content="sephean">
 <meta property="og:description" content="cute 20 yo playboy">
 <link rel="icon" href="images/favicon.gif" type="image/gif">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,600;1,500&family=EB+Garamond:ital@0;1&family=VT323&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+<div class="grain" aria-hidden="true"></div>
+
 <div id="curtain">
   <div class="curtain-inner">
     <span class="curtain-glyph">✦</span>
-    <h1>ma9rouna</h1>
-    <p class="curtain-sub">Welcome!</p>
-    <button id="enter" type="button">Visit</button>
+    <h1>sephean</h1>
+    <p class="curtain-sub">welcome, anon</p>
+    <button id="enter" type="button"><span>enter</span></button>
+    <p class="curtain-hint">♪ sound on</p>
   </div>
 </div>
 
 <main id="main" aria-hidden="true">
 
-  <section class="layout">
-    <div class="hero-col">
-      <img class="angel" src="images/angels.png" alt="Une silhouette d'ange suspendue" draggable="false">
-    </div>
+  <header class="topbar">
+    <span class="brand">sephean<span class="brand-dot">✦</span></span>
+    <span class="status"><i class="status-dot"></i><span id="clock">--:--</span></span>
+  </header>
 
-    <div class="thread-col" id="thread">
-      <div class="win">
-        <div class="win-titlebar">
-          <span class="win-title">shitpost</span>
-        </div>
-        <div id="thread-list" class="thread-list"></div>
+  <section class="layout">
+    <figure class="hero-col">
+      <div class="halo" aria-hidden="true"></div>
+      <div class="frame">
+        <img class="angel" src="images/angels.png" alt="A hand-drawn cat wearing glasses" draggable="false">
       </div>
+      <figcaption class="hero-caption">
+      </figcaption>
+    </figure>
+
+    <div class="shell-col">
+      <div class="win" id="shell">
+        <div class="win-titlebar">
+          <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="win-title">steph@sephean: ~</span>
+          <span class="win-count" id="thread-count"></span>
+        </div>
+        <div class="shell-body" id="shell-body">
+          <div id="shell-out" class="shell-out" aria-live="polite"></div>
+          <form id="shell-form" class="shell-line" autocomplete="off">
+            <span class="ps1"><b>steph</b>@sephean<em>:~$</em></span>
+            <input id="shell-input" type="text" spellcheck="false" aria-label="terminal input">
+          </form>
+        </div>
+      </div>
+      <p class="shell-tip">type <kbd>help</kbd> in the shell</p>
     </div>
   </section>
 
   <footer class="site-footer">
     <button id="sound-toggle" type="button" aria-pressed="false">
-      <svg id="sound-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
-      <span id="sound-label">turn off music</span>
+      <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="track">viles</span>
+      <span id="sound-label">paused</span>
     </button>
-    <p class="footer-mark">github.com/ma9rounabsalsalsa</p>
+    <span class="footer-mark">made with ✦ by sephean</span>
   </footer>
 
 </main>
